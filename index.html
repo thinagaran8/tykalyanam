@@ -10,6 +10,7 @@
   <link rel="manifest" href="manifest.json" />
   <link rel="apple-touch-icon" href="icon-192.png" />
   <title>TY Kalyanam</title>
+  <!-- version: youtube-video-embed-v1 -->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
 
@@ -378,6 +379,17 @@
       line-height:1.5;
     }
 
+
+    .youtube-frame {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      max-height: 78vh;
+      border: 0;
+      border-radius: 20px;
+      background: #000;
+      display: block;
+    }
+
     .nav-card h2 {
       margin:5px 0 6px;
       font-family:"Cormorant Garamond",Georgia,serif;
@@ -503,9 +515,14 @@
 
   <div class="modal" id="videoModal">
     <div class="video-card">
-      <div class="video-box">
-        <div><strong>Invitation video placeholder</strong><br>Upload your wedding video later, then we will replace this placeholder with the actual video player.</div>
-      </div>
+      <iframe
+        id="youtubeFrame"
+        class="youtube-frame"
+        src=""
+        title="TY Kalyanam Wedding Invitation"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
       <button class="close" id="closeVideo">Close</button>
     </div>
   </div>
@@ -579,13 +596,26 @@
     const videoBtn = document.getElementById('videoBtn');
     const videoModal = document.getElementById('videoModal');
     const closeVideo = document.getElementById('closeVideo');
+    const youtubeFrame = document.getElementById('youtubeFrame');
+    const youtubeUrl = 'https://www.youtube.com/embed/bgsfyta-Rdk?autoplay=1&rel=0&modestbranding=1&playsinline=1';
 
-    if (videoBtn && videoModal) videoBtn.addEventListener('click', () => videoModal.classList.add('show'));
+    function openInvitationVideo() {
+      if (!videoModal || !youtubeFrame) return;
+      youtubeFrame.src = youtubeUrl;
+      videoModal.classList.add('show');
+    }
 
-    if (closeVideo && videoModal) {
-      closeVideo.addEventListener('click', () => videoModal.classList.remove('show'));
+    function closeInvitationVideo() {
+      if (!videoModal || !youtubeFrame) return;
+      videoModal.classList.remove('show');
+      youtubeFrame.src = '';
+    }
+
+    if (videoBtn) videoBtn.addEventListener('click', openInvitationVideo);
+    if (closeVideo) closeVideo.addEventListener('click', closeInvitationVideo);
+    if (videoModal) {
       videoModal.addEventListener('click', (e) => {
-        if (e.target === videoModal) videoModal.classList.remove('show');
+        if (e.target === videoModal) closeInvitationVideo();
       });
     }
 
