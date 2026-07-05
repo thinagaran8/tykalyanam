@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#6f1d14" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="TY Kalyanam" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
+  <link rel="stylesheet" href="css/style.css?v=3.0" />
+  <title>TY Kalyanam</title>
+</head>
+
+<body>
+  <div class="bg-glow"></div>
+
+  <section id="splash" class="splash">
+    <div class="splash-card">
+      <div class="lamp">🪔</div>
+      <div class="splash-mono">தி ♥ 艳</div>
+      <div class="splash-title">TY Kalyanam</div>
+      <div class="splash-date">23 August 2026</div>
+      <button id="enterBtn" class="enter-btn">Enter Invitation</button>
+    </div>
+  </section>
+
+  <div class="petals" aria-hidden="true">
+    <span style="--x:7%;--d:13s;--delay:0s;--drift:55px"></span>
+    <span style="--x:24%;--d:17s;--delay:2s;--drift:-42px"></span>
+    <span style="--x:49%;--d:15s;--delay:4s;--drift:70px"></span>
+    <span style="--x:72%;--d:18s;--delay:1s;--drift:-62px"></span>
+    <span style="--x:91%;--d:16s;--delay:3s;--drift:35px"></span>
+  </div>
+
+  <main class="phone">
+    <section class="page active" id="homePage">
+      <div class="hero">
+        <div class="ribbon">Together with our families</div>
+        <div class="mono">தி ♥ 艳</div>
+        <h1>Thinagaran</h1>
+        <div class="gold-heart">♥</div>
+        <h1>Yen Li</h1>
+        <p class="intro">request the honour of your presence as we begin our forever.</p>
+
+        <div class="date-line">Sunday, 23 August 2026</div>
+        <div class="time-line">Muhurtham 7:05 PM · Until 10:30 PM</div>
+
+        <div class="countdown" aria-label="Countdown">
+          <div class="count-card"><b id="days">0</b><span>Days</span></div>
+          <div class="count-card"><b id="hours">00</b><span>Hours</span></div>
+          <div class="count-card"><b id="minutes">00</b><span>Minutes</span></div>
+          <div class="count-card"><b id="seconds">00</b><span>Seconds</span></div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="action gold" id="videoBtn"><span>▶</span><div><b>Watch Invitation</b><small>Fullscreen wedding film</small></div></button>
+        <a class="action red" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Thinagaran%20%26%20Yeoh%20Yen%20Li%20Wedding&dates=20260823T110500Z/20260823T143000Z&location=https%3A%2F%2Fmaps.app.goo.gl%2F2QyUj3udpuiFAStJ6&details=Thinagaran%20%26%20Yeoh%20Yen%20Li%20Wedding.%20Google%20Maps%3A%20https%3A%2F%2Fmaps.app.goo.gl%2F2QyUj3udpuiFAStJ6%20%7C%20Waze%3A%20https%3A%2F%2Fwaze.com%2Ful%2Fhw284r2bty" target="_blank" rel="noopener"><span>📅</span><div><b>Add to Calendar</b><small>Save the wedding date</small></div></a>
+        <button class="action dark" id="navBtn"><span>📍</span><div><b>Navigate to Venue</b><small>Google Maps or Waze</small></div></button>
+        <button class="action black install" id="installBtn"><span>⬇</span><div><b>Install TY Kalyanam</b><small>Add this wedding hub to your phone</small></div></button>
+      </div>
+    </section>
+
+    <section class="page" id="timelinePage">
+      <div class="section-card">
+        <div class="ribbon">Wedding Programme</div>
+        <h2>Our Wedding Evening</h2>
+        <p>Simple timeline for guests. Final timing can be adjusted anytime.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="line-item"><time>6:30 PM</time><div><b>Guest Arrival</b><span>Welcome to the temple</span></div></div>
+        <div class="line-item highlight"><time>7:05 PM</time><div><b>Muhurtham</b><span>Sacred wedding ceremony</span></div></div>
+        <div class="line-item"><time>8:00 PM</time><div><b>Blessings</b><span>Family and guest blessings</span></div></div>
+        <div class="line-item"><time>8:30 PM</time><div><b>Dinner</b><span>Traditional dinner</span></div></div>
+        <div class="line-item"><time>10:30 PM</time><div><b>Thank You</b><span>End of celebration</span></div></div>
+      </div>
+    </section>
+
+    <section class="page" id="venuePage">
+      <div class="section-card">
+        <div class="ribbon">Venue</div>
+        <h2>Dewi Sri Rajamariamman Alayam</h2>
+        <p>Jalan Perusahaan 3</p>
+      </div>
+
+      <div class="venue-card">
+        <div class="venue-art">
+          <div class="pin">📍</div>
+          <div>
+            <b>Wedding Venue</b>
+            <span>Tap your preferred navigation app below.</span>
+          </div>
+        </div>
+        <button class="venue-btn maps" data-google>Open Google Maps</button>
+        <button class="venue-btn waze" data-waze>Open Waze</button>
+      </div>
+    </section>
+
+    <section class="page" id="contactPage">
+      <div class="section-card">
+        <div class="ribbon">Need Assistance?</div>
+        <h2>Family Contacts</h2>
+        <p>Tap to WhatsApp the correct family contact.</p>
+      </div>
+
+      <div class="contact-card">
+        <div class="avatar">👳</div>
+        <div><b>Groom Side</b><span>Thangamani</span></div>
+        <a href="https://wa.me/60149237545" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+
+      <div class="contact-card">
+        <div class="avatar">👰</div>
+        <div><b>Bride Side</b><span>Siva</span></div>
+        <a href="https://wa.me/60175135788" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      Thank you for celebrating the beginning of our forever.<br />
+      <strong>#TYKalyanam</strong>
+    </footer>
+  </main>
+
+  <nav class="bottom-nav">
+    <button class="tab active" data-target="homePage">🏠<span>Home</span></button>
+    <button class="tab" data-target="timelinePage">🪔<span>Timeline</span></button>
+    <button class="tab" data-target="venuePage">📍<span>Venue</span></button>
+    <button class="tab" data-target="contactPage">💬<span>Contact</span></button>
+  </nav>
+
+  <div class="modal" id="navModal">
+    <div class="modal-card">
+      <h3>Navigate to Venue</h3>
+      <p>Choose your preferred navigation app.</p>
+      <button class="modal-option maps" data-google>🗺 Open Google Maps</button>
+      <button class="modal-option waze" data-waze>🚗 Open Waze</button>
+      <button class="modal-close" id="closeNav">Cancel</button>
+    </div>
+  </div>
+
+  <div class="video-layer" id="videoLayer">
+    <div class="video-top">TY Kalyanam Invitation</div>
+    <button class="video-close" id="closeVideo">×</button>
+    <video id="weddingVideo" controls playsinline preload="metadata">
+      <source src="Invitation.mp4" type="video/mp4" />
+      Your browser does not support video playback.
+    </video>
+  </div>
+
+  <script>
+    window.TYK = {
+      weddingDate: "2026-08-23T19:05:00+08:00",
+      googleMapsUrl: "https://maps.app.goo.gl/2QyUj3udpuiFAStJ6",
+      wazeUrl: "https://waze.com/ul/hw284r2bty"
+    };
+  </script>
+  <script src="js/app.js?v=3.0"></script>
+</body>
+</html>
