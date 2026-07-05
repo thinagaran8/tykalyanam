@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#681d19" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="TY Kalyanam" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
+  <link rel="stylesheet" href="css/style.css?v=7.0" />
+  <title>TY Kalyanam</title>
+</head>
+<body>
+  <div class="paper-grain"></div>
+  <div class="petals"><span></span><span></span><span></span><span></span><span></span></div>
+
+  <section id="splash" class="splash">
+    <div class="splash-card">
+      <div class="hanging-lamp left">🪔</div>
+      <div class="hanging-lamp right">🪔</div>
+      <img src="assets/images/ty-logo-gold.png" class="splash-logo" alt="TY Kalyanam Logo" />
+      <div class="splash-hash">#TYKalyanam</div>
+      <h1>Thinagaran<br><span>&</span><br>Yeoh Yen Li</h1>
+      <p>Sunday · 23 August 2026</p>
+      <button id="enterBtn" class="enter-btn">Enter Invitation</button>
+    </div>
+  </section>
+
+  <button id="musicBtn" class="music-btn" aria-label="Toggle music">♪</button>
+  <audio id="bgMusic" loop preload="none"><source src="assets/audio/music.mp3" type="audio/mpeg"></audio>
+
+  <main class="site">
+    <section class="page active" id="homePage">
+      <article class="poster-card home-card">
+        <div class="corner tl"></div><div class="corner tr"></div>
+        <div class="lamp lamp-left">🪔</div><div class="lamp lamp-right">🪔</div>
+
+        <div class="top-line">Together with our families</div>
+        <div class="logo-ring"><img src="assets/images/ty-logo-gold.png" alt="TY Kalyanam Logo"></div>
+        <div class="hashtag">#TYKalyanam</div>
+
+        <section class="names-block">
+          <h1>Thinagaran</h1>
+          <div class="heart-line"><span></span><b>♥</b><span></span></div>
+          <h1>Yeoh Yen Li</h1>
+          <p>Request the honour of your presence<br>as we begin our forever.</p>
+        </section>
+
+        <section class="date-feature">
+          <div class="date-side">August</div>
+          <div class="date-main"><span>Sunday</span><strong>23</strong><em>Muhurtham</em></div>
+          <div class="date-side">2026</div>
+        </section>
+
+        <div class="time-line">7:05 PM · Until 10:30 PM</div>
+
+        <section class="countdown-panel">
+          <div class="countdown-title">We can’t wait to celebrate with you</div>
+          <div class="countdown">
+            <div><strong id="days">0</strong><span>Days</span></div>
+            <div><strong id="hours">00</strong><span>Hours</span></div>
+            <div><strong id="minutes">00</strong><span>Minutes</span></div>
+            <div><strong id="seconds">00</strong><span>Seconds</span></div>
+          </div>
+        </section>
+
+        <section class="action-grid">
+          <button id="videoBtn" class="action-icon"><i>▶</i><span>Watch<br>Invitation</span></button>
+          <a class="action-icon" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Thinagaran%20%26%20Yeoh%20Yen%20Li%20Wedding&dates=20260823T110500Z/20260823T143000Z&location=https%3A%2F%2Fmaps.app.goo.gl%2F2QyUj3udpuiFAStJ6&details=Thinagaran%20%26%20Yeoh%20Yen%20Li%20Wedding" target="_blank"><i>▦</i><span>Add to<br>Calendar</span></a>
+          <button id="navBtn" class="action-icon"><i>⌖</i><span>View<br>Location</span></button>
+          <button id="installBtn" class="action-icon install"><i>↓</i><span>Install<br>App</span></button>
+        </section>
+      </article>
+    </section>
+
+    <section class="page" id="timelinePage">
+      <article class="poster-card inner">
+        <div class="section-kicker">Wedding Programme</div>
+        <h2 class="page-title">Elegant Timeline</h2>
+        <div class="timeline">
+          <article><time>6:30 PM</time><b>Guest Arrival</b><span>Welcome drinks and seating at the temple.</span></article>
+          <article class="highlight"><time>7:05 PM</time><b>Muhurtham</b><span>The sacred wedding ceremony.</span></article>
+          <article><time>8:00 PM</time><b>Blessings</b><span>Family and guest blessings.</span></article>
+          <article><time>8:30 PM</time><b>Dinner</b><span>Traditional dinner will be served.</span></article>
+          <article><time>10:30 PM</time><b>Thank You</b><span>End of celebration.</span></article>
+        </div>
+      </article>
+    </section>
+
+    <section class="page" id="templePage">
+      <article class="poster-card inner">
+        <div class="section-kicker">Temple</div>
+        <h2 class="page-title">Dewi Sri Rajamariamman Alayam</h2>
+        <p class="subtle">Jalan Perusahaan 3</p>
+        <div class="venue-large"><img src="assets/images/temple.jpg" alt="Temple"></div>
+
+        <div class="creative-info">
+          <div><i>👗</i><span>Dress Code</span><b>Traditional Indian attire preferred</b></div>
+          <div><i>🕡</i><span>Arrival</span><b>Please arrive before 6:30 PM</b></div>
+          <div><i>🍛</i><span>Dinner</span><b>Traditional dinner after blessings</b></div>
+          <div><i>🚗</i><span>Parking</span><b>Follow temple/event crew guidance</b></div>
+        </div>
+
+        <button class="nav-button maps" data-google>Open Google Maps</button>
+        <button class="nav-button waze" data-waze>Open Waze</button>
+      </article>
+    </section>
+
+    <section class="page" id="contactPage">
+      <article class="poster-card inner">
+        <div class="section-kicker">Contact</div>
+        <h2 class="page-title">Family Contacts</h2>
+
+        <div class="contact-section">
+          <h3>Groom Side</h3>
+          <a href="https://wa.me/60149237545" target="_blank"><span class="person">👤</span><div><b>Thangamani</b><small>0149237545</small></div><span class="wa">WhatsApp</span></a>
+          <a href="https://wa.me/60183599179" target="_blank"><span class="person">👤</span><div><b>Anandan</b><small>0183599179</small></div><span class="wa">WhatsApp</span></a>
+          <a href="https://wa.me/60102177794" target="_blank"><span class="person">👤</span><div><b>Yoges</b><small>0102177794</small></div><span class="wa">WhatsApp</span></a>
+        </div>
+
+        <div class="contact-section">
+          <h3>Bride Side</h3>
+          <a href="https://wa.me/60175135788" target="_blank"><span class="person">👤</span><div><b>Siva</b><small>0175135788</small></div><span class="wa">WhatsApp</span></a>
+          <a href="https://wa.me/60174200852" target="_blank"><span class="person">👤</span><div><b>Calvin</b><small>0174200852</small></div><span class="wa">WhatsApp</span></a>
+        </div>
+      </article>
+    </section>
+
+    <footer class="footer">We can’t wait to celebrate with you.<br><strong>#TYKalyanam</strong></footer>
+  </main>
+
+  <nav class="bottom-nav">
+    <button class="active" data-target="homePage"><i>⌂</i><span>Home</span></button>
+    <button data-target="timelinePage"><i>◷</i><span>Timeline</span></button>
+    <button data-target="templePage"><i>⌖</i><span>Temple</span></button>
+    <button data-target="contactPage"><i>☎</i><span>Contact</span></button>
+  </nav>
+
+  <div class="modal" id="navModal">
+    <div class="modal-card">
+      <h3>Navigate to Venue</h3>
+      <p>Choose your preferred navigation app.</p>
+      <button class="nav-button maps" data-google>Open Google Maps</button>
+      <button class="nav-button waze" data-waze>Open Waze</button>
+      <button class="nav-button cancel" id="closeNav">Cancel</button>
+    </div>
+  </div>
+
+  <div class="video-layer" id="videoLayer">
+    <div class="video-title">TY Kalyanam Invitation</div>
+    <button class="video-close" id="closeVideo">×</button>
+    <video id="weddingVideo" controls playsinline preload="metadata">
+      <source src="Invitation.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <script>
+    window.TYK = { weddingDate:"2026-08-23T19:05:00+08:00", googleMapsUrl:"https://maps.app.goo.gl/2QyUj3udpuiFAStJ6", wazeUrl:"https://waze.com/ul/hw284r2bty" };
+  </script>
+  <script src="js/app.js?v=7.0"></script>
+</body>
+</html>
